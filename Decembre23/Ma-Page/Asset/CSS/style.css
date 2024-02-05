@@ -1,0 +1,24 @@
+.deco-titre{
+    text-align: center;
+    color: rgba(67, 121, 230, 0.9);
+    font-style: oblique;
+}
+#header{
+    background-color: blueviolet;
+}
+.entete{
+    font-size: 34px;
+}
+p{
+    background-color: rgb(18, 214, 228);
+    font-style: oblique;
+}
+body{
+    background-color: aquamarine;
+}
+.center {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 50%;
+}

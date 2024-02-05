@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Les bases CSS - Ciblage des éléments</title>
+    <style></style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="">a enfant de li</a></li>
+            <li><a href="">a enfant de li</a></li>
+            <li><a href="">a enfant de li</a></li>
+        </ul>
+    </nav>
+    <style>
+        h1{
+            text-align: center;
+            text-transform: uppercase;
+        }
+        h2{
+            text-align: center;
+            text-transform: uppercase;
+            font-style: italic ;
+        }
+        p + a{
+            background-color: red;
+            text-decoration: none;
+            color: yellow;
+        }
+        p + a:hover{
+            color: red;
+            background-color: yellow;
+        }
+        nav > ul > li{
+            list-style-type: none;
+            display: inline;;
+        }
+        nav{
+            background-color: green;
+            color: white;
+        }
+        nav > ul > li > a{
+            color: white;
+            text-decoration: none;
+        }
+        div{
+            background-color: green;
+        }
+        .option1{
+            background-color: #b10f2f;
+            color: blue;
+            font-style: italic;
+        }
+        .option2{
+            background-color: RGB(183,236,25);
+            color: blueviolet;
+        }
+        #parap{
+            color: black;
+        }
+            </style>
+        <h1>Titre niveau 1</h1>
+    <h2>Titre niveau 2</h2>
+    <div>
+        <p>Paragraphe + lien</p>
+        <a href="#">Lien</a>
+    </div>
+    <div>
+        <p>Pas de définition particulière</p>
+        <p class="option1">Affecté par option1</p>
+        <div class="option1 option2">
+            <p>Affecté option1 et option2</p>
+            <p id="parap">Affecté par le style associé à son id</p>
+        </div>
+    </div>
+</body>
+
+</html>

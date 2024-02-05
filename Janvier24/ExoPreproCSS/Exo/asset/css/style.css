@@ -1,0 +1,77 @@
+body{
+    margin-left: 100px;
+}
+
+.fieldset1{
+    border: solid black 1px;
+    width: 550px;
+    height: 350px;
+    border-radius: 20px;
+    padding-left: 5px;
+    box-shadow: 2px 2px 2px black;
+}
+
+.fieldset2{
+    border: solid black 1px;
+    width: 400px;
+    height: 40px;
+    border-radius: 20px;
+    padding-left: 5px;
+    box-shadow: 2px 2px 2px black;
+}
+
+.title1{
+    text-align: center;
+}
+
+.fieldset1 > label {
+    margin: 5px;
+    display: inline-block;
+    width: 250px;
+}
+
+label:hover{
+    font-weight: bolder;
+}
+
+label{
+    margin: 5px;
+    margin-right: 10px;
+    line-height: 2em;
+}
+
+textarea{
+    border-radius: 20px;
+    resize: none;
+    width: 600px;
+}
+
+#genre2{
+    padding-right: 10px;
+}
+
+.fieldset1:hover{
+    background-color: blueviolet;
+}
+
+.fieldset2:hover{
+    background-color: crimson;
+}
+
+.styled1:hover{
+    background-color: green;
+    cursor: pointer;
+}
+
+.styled2:hover{
+    background-color: red;
+    cursor: pointer;
+}
+
+input:valid:not([type=submit]):not([type=radio]){
+    box-shadow: 5px 5px 5px green;
+}
+
+input:invalid:not([type=submit]):not([type=radio]){
+    box-shadow: 5px 5px 5px red;
+}

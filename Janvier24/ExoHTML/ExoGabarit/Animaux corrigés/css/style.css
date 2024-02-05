@@ -1,0 +1,76 @@
+body {
+  max-width: 1200px;
+  margin: auto;
+  background-image: url(/images/bg.jpg);
+
+}
+
+h1{
+  text-align: center;
+  color: green;
+}
+
+.galerie{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.galerie img{
+  border: 2px solid white;
+  flex: 14.28%;
+  max-width: 12.28%;
+}
+
+@media (max-width: 600px){
+  .galerie img{
+    flex: 50%;
+    max-width: 48%;
+  }
+}
+@media (max-width: 1000px) and (min-width: 601px){
+  .galerie img{
+    flex: 25%;
+    max-width: 24%;
+  }
+}
+
+img:hover{
+  filter: sepia(0%)!important;
+  animation-name: anima;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  z-index: 2;
+}
+
+  .galerie img:has(~img:hover),
+  .galerie img:hover~img:not(:hover)
+  {filter: sepia(100%);
+    animation-name: pluspetit;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    z-index: 1;}
+
+@keyframes anima {
+    0%{
+      transform: scale(1,1);
+    }
+    50%{
+      transform: scale(1.25,1.25);
+    }
+    100%{
+      transform: scale(1.5,1.5);
+    }
+  }
+
+  @keyframes pluspetit{
+    0%{
+      transform: scale(1,1);
+    }
+    50%{
+      transform: scale(0.9,0.9);
+    }
+    100%{
+      transform: scale(0.8,0.8);
+    }
+  }

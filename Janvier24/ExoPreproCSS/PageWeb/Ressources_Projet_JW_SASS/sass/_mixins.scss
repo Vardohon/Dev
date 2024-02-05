@@ -1,0 +1,63 @@
+@use 'sass:math';
+
+@mixin title {
+    font-size: 3em;
+    font-weight: bolder;
+}
+
+@mixin blackBox{
+    background-color: black;
+    color: white;
+}
+
+@mixin textBox{
+    background-color: red;
+    color: white;
+    text-align: center;
+}
+
+@mixin boxShadow{
+    box-shadow: 2px 5px 5px black;
+}
+
+@mixin button{
+    background-color: black;
+    color: white;
+    font-family: 'myJournalFont';
+}
+
+// Solution pour le triangle
+// @mixin triangle($size, $color, $direction) {
+//     height: 0;
+//     width: 0;
+  
+//     border-color: transparent;
+//     border-style: solid;
+//     border-width: math.div($size, 2);
+  
+//     @if $direction == up {
+//       border-bottom-color: $color;
+//     } @else if $direction == right {
+//       border-left-color: $color;
+//     } @else if $direction == down {
+//       border-top-color: $color;
+//     } @else if $direction == left {
+//       border-right-color: $color;
+//     } @else {
+//       @error "Unknown direction #{$direction}.";
+//     }
+//   }
+  
+//   .next {
+//     @include triangle(5px, black, right);
+//   }
+
+// @mixin roundedBorder{
+//     border-radius: 10px;
+// }
+
+// @mixin roundedBorder($size, $padding: 1em){
+//     border: $size;
+//     padding: $padding;
+// }
+

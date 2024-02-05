@@ -1,0 +1,34 @@
+@font-face {
+    font-family: 'Parisienne', cursive;
+    src: url();
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: brown;
+}
+
+
+span{
+    font-size: 4rem;
+    margin: 60px;
+    font-family: 'Parisienne';
+    color: white;
+}
+
+.navbar{
+    background-color: rgb(113, 28, 28);
+}
+
+#navbarSupportedContent > ul > li > a:hover{
+    color: red;
+}
+
+section{
+    background-color: aqua;
+    /* width: 80%; */
+    
+}

@@ -1,0 +1,299 @@
+/* variables globales */
+:root{
+    --color0: #000000;
+    --color1: #f6d4f5;
+    --color2: #e9aaf1;
+    --color3: #dd23dd;
+    --color4: #ea35c0;
+    --color5: #90bb45;
+    --color6: #0298b0;
+    --background: #dad1d1;
+}
+
+/* inclut la marge interne et la bordure à la largeur de tous les éléments de la page */
+*{
+    box-sizing: border-box;
+}
+
+/* rend responsives toutes les images de votre page en jouant sur la propriété max-width */
+img{
+    max-width: 100%;
+}
+
+header{
+    background-color: var(--color1);
+}
+
+#cart{
+    color: var(--color2);
+}
+
+#cart span{
+    color: var(--color0);
+    font-weight: bolder;
+    display: block; /* n'accepte personne à droite et à gauche, donc descend à la ligne */
+    text-align: right;
+}
+
+.fa.fa-shopping-cart.right{
+    font-size: 2em;
+    line-height: 2em;
+}
+
+body{
+    background-color: var(--background);
+}
+
+#slider > h2{
+    background-color: var(--color1);
+    position: absolute;
+    opacity: 0.8;
+    margin-left: 1em;
+    padding: 1em;
+}
+
+#slider{
+    margin-top: 2em;
+}
+
+#slider > img{
+    border: 20px solid white;
+}
+
+#slider, #select, #new, #best, #crush{
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+#slider, #select, #new, footer{
+    margin-top: 2em;
+}
+
+h3{
+    font-family: 'Courgette', cursive;
+}
+
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
+
+/* https://www.w3schools.com/howto/howto_css_clearfix.asp */
+.clear{
+    overflow: auto;
+    /* pas de débordement du cadre */
+}
+.clear::after{
+    /* pseudo-élément suivant */
+    content: "";
+    /* le pseudo-élément est vide */
+    clear: both;
+    display: table;
+    /* pour faire un simili-tableau */
+}
+
+.topbar{
+    background-color: var(--color0);
+    color: var(--color3);
+    text-align: center;
+}
+
+/* Les balises associées à la classe container devront occuper 75% de la largeur de la page jusqu'à une max-width de 1500 pixels. */
+.container{
+    width: 75%;
+    max-width: 1500px;
+    margin: auto;
+}
+
+.container > nav{
+    display: flex;
+}
+
+.container > nav > a{
+    flex: 1;
+    text-align: center; 
+    text-decoration: none;
+    padding: 1em 0;
+    color: var(--color0);
+    transition: all 0.2s;
+    text-transform: uppercase;
+}
+
+/* définit une transition d'une durée 0.2 seconde */
+.container > nav > a:hover{
+    color: white;
+    background-color: rgb(53,50,50);
+}
+
+.container > a > img{
+    margin-left: 2em;
+}
+
+#select{
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1em 0;
+}
+
+#select > h1{
+    width: 100%;
+    margin-left: 5em;
+}
+
+#select > article{
+    flex: 1;
+    text-align: center;
+    justify-content: space-around;
+}
+
+#select:hover > article{
+    opacity: 0.5;
+    transition: all ease 2s;
+}
+
+#select > article:hover{
+    opacity: 1;
+    transition: all ease-in-out 2s;
+}
+
+
+#select > article > img{
+    height: 110px;
+    justify-content: space-around;
+}
+
+#news > *{
+    background-color: white;
+    width: 33.1%;
+    text-align: center;
+    display: inline-block;
+}
+
+#news > * > h2{
+    padding: 0.25em;
+}
+
+
+#news > * > img{
+    height: 347px;
+}
+
+#new, #best, #crush {
+    padding: 0 5.8em 1.25em;
+}
+
+#new > h2{
+    background-color: var(--color4);
+    color: white;
+}
+
+#new > h2::before, #best > h2::before, #crush > h2::before{
+    content: url(../img/logo4.png);
+    padding-right: 0.5em;
+}
+
+
+#best > h2{
+    background-color: var(--color5);
+    color: white;
+}
+
+#crush > h2{
+    background-color: var(--color6);
+    color: white;
+}
+
+footer{
+    background-color: var(--color1);
+}
+
+#info{
+    background-color: var(--color2);
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1em 0;
+}
+
+#info .fa{
+    display: block;
+    text-align: center;
+}
+
+#bottombar{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    line-height: 2em;
+}
+
+#info > article:hover{
+    color: var(--color1);
+    background-color: rgb(53,50,50);
+    cursor: pointer;
+}
+
+#bottombar > article > ul > li:hover{
+    color: white;
+    background-color: rgb(53,50,50);
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 640px ) {
+    .escarpin > img{
+        height: auto;
+    }
+
+    #news{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container, #news > *{
+        width: 100%;
+    }
+
+    #new, .escarpin{
+        width: 100%;
+    }
+
+    div.container > a > img{
+        margin-left: auto;
+    }
+
+    #cart{
+        display: none;
+    }
+
+    nav{
+        flex-direction: column;
+    }
+
+    #slider > h2{
+        position: initial;
+        margin-left: auto;
+    }
+
+    #slider{
+        margin-top: 0;
+    }
+
+    #select, #bottombar, #info{
+        flex-direction: column;
+    }
+
+    #select > h1{
+    margin-left: 0;
+    }
+
+    #info {
+        text-align: center;
+    }
+}

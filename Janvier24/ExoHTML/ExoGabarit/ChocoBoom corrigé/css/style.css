@@ -1,0 +1,103 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(27,139,143);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container{
+    width: 75%;
+    margin: auto;
+
+}
+
+h1, h2, h3{
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 1.4em;
+    background-color: #603b32;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    padding: 0.5em 0;
+}
+
+header{
+    text-align: center;
+}
+
+nav{
+    background-color: #603b32;
+    font-size: 1.6em;
+}
+
+nav > a{
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    width: 12em;
+    height: 3em;
+    line-height: 3em;
+    transition: background-color 0.6s ease;
+}
+
+main.container > section > img:nth-child(1){
+    border-radius: 10px;
+    width: 75%;
+    max-width: 600px;
+}
+
+main.container > section{
+    background-color: #448088;
+    width: 70%;
+    float: left;
+    padding: 0.5em;
+    color: white;
+    line-height: 2em;
+}
+
+main.container > aside{
+    background-color: white;
+    width: 30%;
+    display: inline-block;
+    padding: 0.5em;
+    text-align: justify;
+    line-height: 2em;
+}
+
+nav > a:hover{
+    background-color: #a79189;
+}
+
+
+main.container > section > p{
+    margin-bottom: 2em;
+}
+
+
+@media only screen and (min-width: 560px) and (max-width: 960px){
+    /* tablettes */
+    main.container > aside{
+        width: 100%;
+    }
+    main.container > section{
+        width: 100%;
+    }
+    nav > a{
+        width: auto;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    /* téléphone */
+    main.container > section{
+        width: 100%;
+    }
+    main.container > aside{
+        display: none;
+    }
+    nav > a {
+        width: 100%;
+    }
+}

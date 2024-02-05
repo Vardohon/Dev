@@ -1,0 +1,22 @@
+.title1{
+    text-align: center;
+    font-style: bold;
+}
+
+.title2{
+    font-style: bold;
+    margin: 25px;
+}
+
+.paragraphe{
+    margin: 25px;
+}
+
+.styled { 
+        margin-left: 25px;
+        cursor: pointer;
+        text-transform: uppercase;
+        text-align: center;
+        position: relative;
+}
+

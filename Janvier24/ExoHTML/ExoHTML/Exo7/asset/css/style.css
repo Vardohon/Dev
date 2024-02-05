@@ -1,0 +1,24 @@
+.titre{
+    text-align: center;;
+    font-weight: bolder;
+    font-family: 'Arial';
+    font-size: 35px;
+    margin-top: 30px;
+    }
+
+.marge{
+        border-collapse: separate;
+        margin-top: 40px;
+        margin-left: 600px;
+        margin-right: 600px;
+        text-align: justify;
+    }
+
+    .text{
+        margin: 15px;
+    }
+
+.img{
+    float: right;
+    margin: 5px 5px 5px 5px
+}
