@@ -6,7 +6,7 @@ tab[3] = 25;
 tab[4] = 14;
 tab[5] = 17;
 tab[6] = 20;
-let somme = 0
+let somme = 0;
 
 for (i=0; i<tab.length; i++){
     somme = parseInt(somme) + parseInt(tab[i]);
