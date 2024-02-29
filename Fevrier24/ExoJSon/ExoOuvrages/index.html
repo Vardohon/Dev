@@ -24,15 +24,16 @@
         <select id="listCategories"></select>
     </div>
 
-    <div>Recherche :
-        <input type="search" id="recherche"></select>
-        <button id="button">Recherche</button>
-    </div>
+    <form id="form" > Recherche :
+        <input type="text" id="recherche">
+        <input type="submit" value="Valider">
+    </form>
 
-    <div class="text-center">
-    <div class="spinner-border text-danger" role="status">
-        <span class="sr-only"></span>
-        </div></div>
+    <div class="d-flex justify-content-center">
+        <div id="loader" class="spinner-border text-danger" role="status">
+            <span class="sr-only"></span>
+        </div>
+    </div>
 
     <div id="booksList" class="container-fluid"></div>
 

@@ -1,6 +1,7 @@
 let booksList = new Array();
 let authorsList = new Array();
 let categoriesList = new Array();
+let form = document.getElementById("form");
 
 let options = {
     weekday: "long",
@@ -9,7 +10,12 @@ let options = {
     day: "numeric",
 };
 
-
+window.onload = function () {
+    // Retirer l'indicateur de chargement
+    let loader = document.getElementById('loader');
+    loader.style.display = 'none';
+    // Autres opérations après le chargement complet de la page
+};
 
 
 
@@ -19,8 +25,7 @@ let selectAuthors = document.getElementById("listAuthors");
 selectAuthors.addEventListener("change", chargedByAuthor); // Changement sur la liste déroulante
 let selectCategories = document.getElementById("listCategories");
 selectCategories.addEventListener("change", chargedByCategory);
-let selectRecherche = document.getElementById("button");
-selectRecherche.addEventListener("click", chargedByRecherche);
+form.addEventListener("submit", CheckForm);// méthode qui ajoute un écouteur d'événement a l'élément html
 
 function jSonOnLoad() {
     fetch("asset/data/books.json")
@@ -209,24 +214,20 @@ function chargedByCategory() {
     }
 }
 
-function chargedByRecherche() {
-    let strRecherche = selectRecherche.options[selectRecherche.selectedIndex].text;
-    let booksByRecherche = new Array();
+function CheckForm(event) {
+    event.preventDefault();// empeche que la soumission d'un formulaire recharge la page entierement
+    let strSearch = document.getElementById("recherche").value;
+    let booksBySearch = new Array();
 
-    if (strRecherche == "") {
+    if (strSearch == "") {
         showBooks(booksList);
-    }
-    else {
+    } else {
         for (let index = 0; index < booksList.length; index++) {
-            const element = booksList[index];
-
-            if (element.title.indexOf(strRecherche) != -1) {
-                booksByRecherche.push(element);
+            const element = booksList[index]; //création d'une constant qui prend la valeur de la liste des livres
+            if (element.title.includes(strSearch)) {// si dans le titre il y a la chaine de caractere saisi Bingo!
+                booksBySearch.push(element);
             }
         }
-        console.log(chargedByAuthor())
-        selectAuthors.selectedIndex = 0
-        selectCategories.selectedIndex = 0
-        showBooks(booksByCategories);
+        showBooks(booksBySearch);
     }
-};
+}
