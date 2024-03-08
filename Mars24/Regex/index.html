@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h4>Vos coordonnées :</h4>
+    <label id="etoile">*</label><label id="zone">Ces zones sont obligatoires pour envoyer le formulaire.</label>
+    <form id="formulaire">
+        <br>
+        <label for="societe">Société :</label><input minlength="1" type="text" id="societe" name="fname"><label class="etoile">*</label>
+        <br>
+        <label for="contact">Personne à contacter :</label><input minlength="1" type="text" id="contactaprevenir" name="fname"><label
+            class="etoile">*</label>
+        <br>
+        <label>Adresse de l'entreprise :</label><textarea name="adresse" rows="5" cols="30"></textarea>
+        <br>
+        <label for="cpostal">Code Postal :</label><input minlength="5" type="text" id="codepostal" name="fname"><label
+            class="etoile">*</label>
+        <br>
+        <label for="ville">Ville :</label><input minlength="1" type="text" id="ville" name="fname"><label class="etoile">*</label>
+        <br>
+        <label for="mail">Email :</label><input  type="text" id="mail" name="fname"><label class="etoile">*</label>
+        <br>
+        <label for="tel">Téléphone :</label><input type="text" id="tel" name="fname">
+        <br>
+        <label for="projet">Sélectionnez l'environnement technique du projet :</label><textarea name="adresse" rows="10"
+            cols="20"></textarea>
+        <br>
+        <select name="thelist" onChange="combo(this, 'theinput')">
+            <option>Choisissez</option>
+            <option>Access</option>
+            <option>Java</option>
+            <option>Delphi</option>
+            <option>Windev</option>
+            <option>Visual Basic</option>
+            <option>Power Builder</option>
+            <option>Internet</option>
+            <option>Intranet</option>
+            <option>Windows NT</option>
+            <option>Unix</option>
+            <option>SQL server</option>
+            <option>Oracle</option>
+            <option>Autres...</option>
+        </select>
+        <br>
+        <input type="submit" value="Envoyer">
+        <input type="reset" value="Effacer">
+    </form>
+    <script src="main.js"></script>
+</body>
+
+</html>
