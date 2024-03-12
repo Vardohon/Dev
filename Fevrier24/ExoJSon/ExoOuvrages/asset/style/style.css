@@ -3,7 +3,10 @@
 }
 
 body {
-    background-color: rgb(195, 203, 215);
+    /* background-color: rgb(195, 203, 215); */
+    background-image: url(/asset/img/fond.jpg);
+    background-position: center;
+    background-size: contain;
 }
 
 #booksList {
@@ -13,8 +16,17 @@ body {
     justify-content: space-around;
 }
 
-.card h1 {
+.card{
+    box-shadow: 10px 5px 5px rgb(76, 67, 41);
+}
+
+h1 {
+    color: rgb(241, 224, 151);
+}
+
+.card>h1 {
     font-size: 14px;
+    color: black;
 }
 
 .card h2 {
@@ -33,7 +45,7 @@ img {
 
 .card {
     text-align: center;
-    background-color: rgb(212, 183, 240);
+    background-color: rgb(185, 166, 107);
 }
 
 #listAuthors,
@@ -49,6 +61,6 @@ div {
 
 @media (max-width: 1280px) {
     img {
-        width: 100%
+        width: 50%
     }
 }

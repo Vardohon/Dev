@@ -1,52 +1,75 @@
 /* You can add global styles to this file, and also import other style files */
 @import "bootstrap/dist/css/bootstrap.css";
 
-*{
+* {
     box-sizing: border-box;
-    margin: 30px;
 }
 
-body{
-    background-color: rgb(243, 200, 200) ;
-    background-size: cover;
+body {
+    background-image: url(assets/img/FondClair.avif);
+    background-size: 120%;
+    background-position: center;
 }
 
-.mx-auto{
-    background-color: #5fbcb6;
+section {
+    margin: 3em;
+}
+
+h1,
+h2 {
+    color: rgb(189, 12, 12);
+}
+
+.mx-auto {
     font-style: italic;
     text-align: center;
     margin: 3em;
 }
 
-.btn{
+.btn {
     background-color: #87bb34;
     color: white;
 }
 
-.col-lg-5, .m-2, .text-center{
-    background-color: #c39df9;
+.col-lg-5,
+.m-2 {
+    background-color: rgb(185, 148, 26);
     color: white;
     font-style: normal;
     font-weight: bold;
+    border-radius: 50%;
 }
 
-
-span{
-    color: rgb(46, 67, 222);
+p {
+    margin-top: 4em;
 }
 
-p{
-    color: rgb(46, 67, 222);
+#copyright {
+    color: rgb(189, 12, 12);
 }
+
+span {
+    color: rgb(189, 12, 12);
+    text-decoration: underline rgb(189, 12, 12);
+}
+
 
 @media only screen and (max-width: 1280px) {
-    #photo, #nutriscore {
-        height: auto; 
+
+    #photo,
+    #nutriscore {
+        height: auto;
     }
-    div, #bouton{
-        display: flex;
+
+    div {
+        /* display: flex; */
         flex-direction: column;
         width: 100%;
         margin: auto;
+    }
+
+    .btn {
+        text-align: center !important;
+        flex-direction: column;
     }
 }

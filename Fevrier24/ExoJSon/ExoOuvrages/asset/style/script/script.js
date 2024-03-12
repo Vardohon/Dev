@@ -9,6 +9,7 @@ let options = {
     month: "long",
     day: "numeric",
 };
+// Permet d'afficher la date avec le jour de la semaine en lettres, le jour, le mois et l'année complète en chiffres
 
 window.onload = function () {
     // Retirer l'indicateur de chargement
@@ -19,7 +20,7 @@ window.onload = function () {
 
 
 
-document.addEventListener("DOMContentLoaded", jSonOnLoad);
+document.addEventListener("DOMContentLoaded", jSonOnLoad); // Important pour une grosse base de données
 
 let selectAuthors = document.getElementById("listAuthors");
 selectAuthors.addEventListener("change", chargedByAuthor); // Changement sur la liste déroulante
@@ -29,7 +30,7 @@ form.addEventListener("submit", CheckForm);// méthode qui ajoute un écouteur d
 
 function jSonOnLoad() {
     fetch("asset/data/books.json")
-        .then(response => { //Une fois que notre fichier est chargé
+        .then(response => { // Une fois que notre fichier est chargé
             return response.json(); //  On le convertit en JSon
         })
         .then(booksData => {
@@ -58,7 +59,7 @@ function createList(_data) {
         }
 
     }
-    booksList.sort(function compare(a, b) {
+    booksList.sort(function compare(a, b) { // Permet de ranger alphabétiquement la liste de livres
         if (a.title < b.title) return -1;
         if (a.title > b.title) return 1;
         return 0;
@@ -95,7 +96,7 @@ function showBooks(_data) {
     for (let index = 0; index < _data.length; index++) {
         const book = _data[index];
         let bookElement = document.createElement("div"); // On crée une div pour mettre nos cards
-        bookElement.setAttribute("class", "card m-2 col-12 col-md-2"); // cla sse de Bootstrap
+        bookElement.setAttribute("class", "card m-2 col-5 col-md-2"); // classe de Bootstrap
 
         let titre = "";
         if (book.title.length > 20) { // Si la longueur du titre dépasse les 20 caractères
@@ -164,7 +165,7 @@ function showBooks(_data) {
             bookElement.innerHTML += "<h4> <span class='infobulle' title='" + description + "'>" + descriptionShort + "</span> </h4>"; // += calcule la somme ou la concaténation et affecte le résultat à la variable
         }
         else {
-            bookElement.innerHTML += "<h4> span class='infobulle' title='" + description + "</span> </h4>"; // Ne fonctionne pas à voir avec Guillaume
+            bookElement.innerHTML += "<h4> span class='infobulle' title='" + description + "</span> </h4>";
         }
 
 
